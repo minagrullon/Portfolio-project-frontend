@@ -20,5 +20,19 @@ export default function ItemDetails() {
       .catch((error) => console.log(error));
   }, [id]);
 
-  return <div>ItemDetails</div>;
+  return (
+    <div className="item_details">
+      <div className="photo_container">
+        <img src={item.image} alt={item.image} />
+      </div>
+      <div className="">
+        <h2>{item.name}</h2>
+        <h3>$ {item.price}</h3>
+        <p>{item.description}</p>
+        <a href={item.link} rel="noreferrer" target="_blank">
+          <h5>Find the item here!</h5>
+        </a>
+      </div>
+    </div>
+  );
 }
