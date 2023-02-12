@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Comments from "./Comments";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -63,6 +64,9 @@ export default function ItemDetails() {
         </button>
         <button onClick={handleDelete}>Delete this item</button>
       </div>
+      <hr></hr>
+      <hr></hr>
+      <Comments />
     </div>
   );
 }

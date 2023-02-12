@@ -1,11 +1,12 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import dog from "../doggo.jpeg";
+import "./Navbar.css";
 
 export default function Navbar() {
   const navigate = useNavigate();
   return (
-    <nav style={{ border: "2px solid black" }}>
+    <nav>
       <img
         src={dog}
         alt="logo"

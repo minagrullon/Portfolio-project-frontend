@@ -1,0 +1,40 @@
+.nav_img {
+  height: 80px;
+  width: 100px;
+  border-radius: 80%;
+  margin-left: 25px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  /* background: rgb(120, 241, 242);
+  background: linear-gradient(
+    0deg,
+    rgb(49, 131, 231) 0%,
+    rgb(238, 231, 217) 100%
+  ); */
+  background: rgb(240, 217, 144);
+  background: radial-gradient(
+    circle,
+    rgba(240, 217, 144, 1) 0%,
+    rgba(199, 212, 242, 1) 27%
+  );
+}
+
+.nav_index {
+  text-decoration: none;
+}
+
+.nav_button button {
+  padding: 6px;
+  background-color: rgb(200, 179, 239);
+  border-radius: 12px;
+  margin-right: 25px;
+}
+
+nav h1 {
+  text-shadow: 5px 5px 5px rgb(227, 212, 190);
+  font-size: 2rem;
+}
