@@ -10,6 +10,10 @@ export default function ItemDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  const handleDelete = () => {
+    deleteItem();
+  };
+
   useEffect(() => {
     axios
       .get(`${API}/items/${id}`)
@@ -19,6 +23,15 @@ export default function ItemDetails() {
       })
       .catch((error) => console.log(error));
   }, [id]);
+
+  const deleteItem = () => {
+    axios
+      .delete(`${API}/items/${id}`)
+      .then(() => {
+        navigate(`/items`);
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <div className="item_details">
@@ -32,6 +45,23 @@ export default function ItemDetails() {
         <a href={item.link} rel="noreferrer" target="_blank">
           <h5>Find the item here!</h5>
         </a>
+      </div>
+      <div className="item_buttons">
+        <button
+          onClick={() => {
+            navigate("/items");
+          }}
+        >
+          Go back
+        </button>
+        <button
+          onClick={() => {
+            navigate(`/items/${id}/edit`);
+          }}
+        >
+          Edit this Item
+        </button>
+        <button onClick={handleDelete}>Delete this item</button>
       </div>
     </div>
   );
