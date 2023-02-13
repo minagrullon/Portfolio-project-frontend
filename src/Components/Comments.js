@@ -67,6 +67,7 @@ export default function Comments({ itemId }) {
     <div className="comments">
       <NewCommentForm itemId={itemId} handleAdd={handleAdd} />
       <h4>Comments</h4>
+      {console.log(itemId)}
       {comments.map((comment) => {
         return (
           <Comment
@@ -75,6 +76,7 @@ export default function Comments({ itemId }) {
             handleSubmit={handleEdit}
             handleDelete={handleDelete}
             handleAdd={handleAdd}
+            itemId={itemId}
           />
         );
       })}

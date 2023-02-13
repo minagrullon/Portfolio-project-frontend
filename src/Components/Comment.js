@@ -7,6 +7,7 @@ export default function Comment({
   handleSubmit,
   handleAdd,
   handleDelete,
+  itemId,
 }) {
   const [viewEditForm, toggleEditform] = useState(false);
   const toggleView = () => {
@@ -17,7 +18,9 @@ export default function Comment({
       {viewEditForm ? (
         <EditCommentForm
           handleSubmit={handleSubmit}
-          viewEditForm={viewEditForm}
+          toggleView={toggleView}
+          itemId={itemId}
+          commentId={comment.id}
         />
       ) : (
         <div>

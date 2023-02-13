@@ -66,7 +66,7 @@ export default function ItemDetails() {
       </div>
       <hr></hr>
       <hr></hr>
-      <Comments />
+      <Comments itemId={item.id} />
     </div>
   );
 }
