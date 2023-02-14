@@ -9,7 +9,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 20px;
   /* background: rgb(120, 241, 242);
   background: linear-gradient(
     0deg,
@@ -28,15 +28,15 @@ nav {
   text-decoration: none;
 }
 
-.nav_button button {
+/* .nav_button button {
   padding: 6px;
   background-color: rgb(200, 179, 239);
   border-radius: 12px;
   margin-right: 25px;
-}
+} */
 
 nav h1 {
   text-shadow: 5px 5px 5px rgb(227, 212, 190);
   font-size: 2rem;
-  font-weight: 600px;
+  font-weight: 700px;
 }

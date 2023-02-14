@@ -1,8 +1,14 @@
+// const { urlencoded } = require("express");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        dog: "url('/src/everyday.png')",
+      },
+    },
     screens: {
       tablet: "640px",
       // => @media (min-width: 640px) { ... }
