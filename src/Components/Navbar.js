@@ -14,7 +14,10 @@ export default function Navbar() {
         onClick={() => navigate(`/`)}
       />
       <h1>
-        <Link className="nav_index" to="/items">
+        <Link
+          className="nav_index font-bold leading-tight text-2xl mt-0 mb-2 ml-24 text-blue-900 max-w-xs hover:shadow-lg transition duration-300 ease-in-out"
+          to="/items"
+        >
           Doggo Central
         </Link>
       </h1>

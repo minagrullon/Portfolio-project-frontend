@@ -16,7 +16,7 @@ export default function Home() {
           className="text-white bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm w-28  py-2.5 text-center mt-10 grid justify-center mx-auto "
           onClick={() => navigate("/items")}
         >
-          View list of Proucts
+          View list of Products
         </button>
         <hr className="border-zinc-400 mt-10"></hr>
         <hr className="border-zinc-400 mt-1"></hr>

@@ -19,7 +19,7 @@ export default function Items({ category }) {
   }, []);
 
   return (
-    <div className="items">
+    <div className="mx-20 mt-10 grid grid-cols-4 gap-8">
       {category
         ? items
             .filter((item) => {
@@ -31,9 +31,6 @@ export default function Items({ category }) {
         : items.map((item) => {
             return <Item key={item.id} item={item} />;
           })}
-      {/* {items.map((item) => {
-        return <Item key={item.id} item={item} />;
-      })} */}
     </div>
   );
 }

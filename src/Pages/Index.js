@@ -7,9 +7,11 @@ import "./Index.css";
 export default function Index() {
   const [category, setCategory] = useState("");
   return (
-    <div className="index_page">
+    <div>
       <Category setCategory={setCategory} />
-      <h2>Recommended Products</h2>
+      <h2 className="text-2xl font-bold text-blue-500 mb-8 ml-8">
+        Recommended Products
+      </h2>
       <Items category={category} />
     </div>
   );
