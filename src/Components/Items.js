@@ -5,7 +5,7 @@ import Item from "./Item";
 
 const API = process.env.REACT_APP_API_URL;
 
-export default function Items() {
+export default function Items({ category }) {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -17,11 +17,23 @@ export default function Items() {
       })
       .catch((err) => console.warn(err));
   }, []);
+
   return (
     <div className="items">
-      {items.map((item) => {
+      {category
+        ? items
+            .filter((item) => {
+              return item.category === category;
+            })
+            .map((item) => {
+              return <Item key={item.id} item={item} />;
+            })
+        : items.map((item) => {
+            return <Item key={item.id} item={item} />;
+          })}
+      {/* {items.map((item) => {
         return <Item key={item.id} item={item} />;
-      })}
+      })} */}
     </div>
   );
 }

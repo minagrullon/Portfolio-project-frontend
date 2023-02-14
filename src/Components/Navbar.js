@@ -21,6 +21,9 @@ export default function Navbar() {
       <Link className="nav_button" to="/items/new">
         <button className="nav_new">Add an item</button>
       </Link>
+      <Link to="/about">
+        <p>About</p>
+      </Link>
     </nav>
   );
 }
