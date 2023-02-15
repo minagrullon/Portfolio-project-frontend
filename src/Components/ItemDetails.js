@@ -43,7 +43,7 @@ export default function ItemDetails() {
         <div className="w-6/12">
           <h2 className="font-medium leading-tight text-2xl mt-0 mb-2 text-blue-800">
             {item.name}
-            {item.is_fav ? <span>❣️</span> : null}
+            {item.is_fav ? <span className="ml-4">❣️</span> : null}
           </h2>
           <h3>$ {item.price}</h3>
           <p className="text-xl font-light leading-relaxed mt-6 mb-6 text-gray-800">
@@ -53,7 +53,7 @@ export default function ItemDetails() {
             href={item.link}
             rel="noreferrer"
             target="_blank"
-            className="font-medium leading-tight text-base text-blue-400"
+            className="font-medium leading-tight text-base text-blue-400 underline decoration-transparent hover:decoration-inherit transition duration-300 ease-in-out"
           >
             <h5>Find the item here!</h5>
           </a>

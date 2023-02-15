@@ -14,7 +14,7 @@ export default function Comment({
     toggleEditform(!viewEditForm);
   };
   return (
-    <div className="comment">
+    <div className="border-2 border-grey-700 p-4 rounded-lg">
       {viewEditForm ? (
         <EditCommentForm
           handleSubmit={handleSubmit}
@@ -24,11 +24,23 @@ export default function Comment({
         />
       ) : (
         <div>
-          <h5>{comment.commenter}</h5>
-          <p>{comment.comment}</p>
-          <div>
-            <button onClick={() => handleDelete(comment.id)}>Delete me!</button>
-            <button onClick={toggleView}>Edit me</button>
+          <h5 className="font-medium underline decoration-indigo-500">
+            {comment.commenter}
+          </h5>
+          <p className="p-3">{comment.comment}</p>
+          <div className="grid justify-items-end">
+            <button
+              className="inline-block px-2 py-1 border-2 border-yellow-500 text-yellow-600 font-medium text-xs leading-tight uppercase rounded-lg hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out my-2"
+              onClick={toggleView}
+            >
+              Edit me
+            </button>
+            <button
+              className="inline-block px-2 py-1 border-2 border-red-700 text-red-700 font-medium text-xs leading-tight uppercase rounded-lg hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+              onClick={() => handleDelete(comment.id)}
+            >
+              Delete me!
+            </button>
           </div>
         </div>
       )}

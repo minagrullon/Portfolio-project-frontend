@@ -64,10 +64,12 @@ export default function Comments({ itemId }) {
   }, [id]);
 
   return (
-    <div className="comments">
+    <div className="p-4 mx-64">
       <NewCommentForm itemId={itemId} handleAdd={handleAdd} />
-      <h4>Comments</h4>
-      {console.log(itemId)}
+      <h4 className="font-medium leading-tight text-base mt-4 mb-2 text-blue-500">
+        Comments
+      </h4>
+
       {comments.map((comment) => {
         return (
           <Comment

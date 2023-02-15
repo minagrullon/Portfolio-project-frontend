@@ -6,7 +6,7 @@ import Category from "../Components/Category";
 export default function Index() {
   const [category, setCategory] = useState("");
   return (
-    <div className="bg-orange-50">
+    <div className="bg-orange-50 h-auto">
       <Category setCategory={setCategory} />
       <h2 className="text-2xl font-bold text-blue-500 mb-8 ml-8">
         Recommended Products
