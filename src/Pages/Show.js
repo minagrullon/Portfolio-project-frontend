@@ -3,8 +3,10 @@ import ItemDetails from "../Components/ItemDetails";
 
 export default function Show() {
   return (
-    <div className="details">
-      <h3>Item Details</h3>
+    <div className="bg-stone-100 h-screen">
+      <h3 className="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-300 p-3">
+        Item Details
+      </h3>
       <ItemDetails />
     </div>
   );
