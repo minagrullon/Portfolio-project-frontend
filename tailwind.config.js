@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         dog: "url('/src/everyday.png')",
+        error: "url('/src/404.png')",
       },
     },
     screens: {
