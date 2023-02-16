@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import NewItem from "../Components/NewItem";
-import Modal from "../Components/Modal";
 
 export default function New() {
   const [showModal, setShowModal] = useState(false);

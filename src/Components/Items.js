@@ -18,7 +18,7 @@ export default function Items({ category }) {
   }, []);
 
   return (
-    <div className="mx-20 mt-10 grid grid-cols-4 gap-8">
+    <div className="mx-20 mt-10 grid grid-cols-4 gap-8 md:grid-cols-3 sm:grid-cols-1">
       {category
         ? items
             .filter((item) => {
