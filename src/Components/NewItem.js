@@ -1,11 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Modal from "./Modal";
 import axios from "axios";
 
 const API = process.env.REACT_APP_API_URL;
 
-export default function NewItem() {
+export default function NewItem({ setShowModal, showModal }) {
   const navigate = useNavigate();
 
   const [item, setItem] = useState({
@@ -49,11 +50,19 @@ export default function NewItem() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addItem(item);
+    if (item.name === "" || item.description === "" || item.link === "") {
+      setShowModal(true);
+    } else {
+      setShowModal(false);
+      addItem(item);
+    }
   };
 
   return (
     <div className="new_item">
+      {showModal ? (
+        <Modal showModal={showModal} setShowModal={setShowModal} />
+      ) : null}
       <h3>New Item Form</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">
@@ -65,7 +74,7 @@ export default function NewItem() {
             type="text"
             onChange={handleTextChange}
             placeholder="Add item name here..."
-            required
+            // required
           />
         </label>
         <label htmlFor="description">
@@ -76,7 +85,7 @@ export default function NewItem() {
             type="text"
             onChange={handleTextChange}
             placeholder="Tell me about it..."
-            required
+            // required
           />
         </label>
         <label htmlFor="description">
@@ -89,7 +98,7 @@ export default function NewItem() {
             min="0"
             step="0.01"
             pattern="\d*\.\d{2}"
-            required
+            // required
           />
         </label>
         <label htmlFor="link">
@@ -101,7 +110,7 @@ export default function NewItem() {
             onChange={handleTextChange}
             placeholder="http://example.com"
             pattern="http[s]*://.+"
-            required
+            // required
           />
         </label>
         <label htmlFor="image">
@@ -113,7 +122,7 @@ export default function NewItem() {
             onChange={handleTextChange}
             placeholder="Enter image url here!"
             pattern="http[s]*://.+"
-            required
+            // required
           />
         </label>
         <label htmlFor="is_fav">
@@ -134,9 +143,6 @@ export default function NewItem() {
                 {option.label}
               </option>
             ))}
-            {/* <option value={category.id} key={category.id}>
-              {category.name}
-            </option> */}
           </select>
         </label>
         <input type="submit" />

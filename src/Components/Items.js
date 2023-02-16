@@ -12,7 +12,6 @@ export default function Items({ category }) {
     axios
       .get(`${API}/items`)
       .then((res) => {
-        console.log(res.data);
         setItems(res.data);
       })
       .catch((err) => console.warn(err));

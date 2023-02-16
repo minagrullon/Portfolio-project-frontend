@@ -61,10 +61,10 @@ export default function EditItemForm() {
   };
 
   return (
-    <div className="edit_form">
-      <h3>Edit page</h3>
+    <div className="block p-6 rounded-xl shadow-xl bg-white w-6/12 h-auto">
+      <h3 className="font-medium text-xl text-sky-700 mb-10">Edit Page</h3>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">
+        <label htmlFor="name" className="font-medium text-blue-600">
           {/* //TODO in the future add margin right to the label to create the spaces between*/}
           Name:{" "}
           <input
@@ -74,20 +74,49 @@ export default function EditItemForm() {
             onChange={handleTextChange}
             placeholder="Add item name here..."
             required
+            className="inline-flex
+            w-full
+            px-3
+            py-1.5
+            text-base
+            text-gray-700
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded-lg
+            transition
+            ease-in-out
+            m-0
+            mb-2
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
           />
         </label>
-        <label htmlFor="description">
+        <label htmlFor="description" className="font-medium text-blue-600">
           Description:{" "}
-          <input
+          <textarea
             id="description"
             value={item.description}
             type="text"
             onChange={handleTextChange}
             placeholder="Tell me about it..."
             required
+            className="block
+            w-full
+            px-3
+            py-1.5
+            text-base
+            text-gray-700
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded-lg
+            transition
+            ease-in-out
+            m-0
+            mb-2
+            h-24
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
           />
         </label>
-        <label htmlFor="description">
+        <label htmlFor="description" className="font-medium text-blue-600">
           Price: ${" "}
           <input
             id="price"
@@ -98,9 +127,22 @@ export default function EditItemForm() {
             step="0.01"
             pattern="\d*\.\d{2}"
             required
+            className="inline-block
+            w-2/12
+            px-3
+            py-1.5
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded-lg
+            transition
+            ease-in-out
+            m-0
+            mb-2
+       "
           />
         </label>
-        <label htmlFor="link">
+        <br></br>
+        <label htmlFor="link" className="font-medium text-blue-600">
           Link:{" "}
           <input
             id="link"
@@ -110,9 +152,25 @@ export default function EditItemForm() {
             placeholder="http://example.com"
             pattern="http[s]*://.+"
             required
+            className="inline-block
+            w-2/3
+            px-3
+            py-1
+            text-base
+            text-gray-700
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded-lg
+            transition
+            ease-in-out
+            m-0
+            mb-2
+          
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
           />
         </label>
-        <label htmlFor="image">
+        <br></br>
+        <label htmlFor="image" className="font-medium text-blue-600">
           Image:{" "}
           <input
             id="image"
@@ -122,8 +180,24 @@ export default function EditItemForm() {
             placeholder="Enter image url here!"
             pattern="http[s]*://.+"
             required
+            className='inline-block
+            w-2/3
+            px-3
+            py-1
+            text-base
+            text-gray-700
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded-lg
+            transition
+            ease-in-out
+            m-0
+            mb-2
+          
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"'
           />
         </label>
+        <br></br>
         <label htmlFor="is_fav">
           Favorite:{" "}
           <input
@@ -133,6 +207,7 @@ export default function EditItemForm() {
             checked={item.is_fav}
           />
         </label>
+        <br></br>
         <label htmlFor="category">
           Category:{" "}
           <select
@@ -151,14 +226,13 @@ export default function EditItemForm() {
             <option key={category[2].value} value={category[2].value}>
               {category[2].label}
             </option>
-            {/* ) */}
-            {/* )} */}
-            {/* <option value={category.id} key={category.id}>
-              {category.name}
-            </option> */}
           </select>
         </label>
-        <input type="submit" />
+        <br></br>
+        <input
+          className="text-white text-mediium bg-blue-300 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm sm:w-auto px-2 py-2.5 text-center w-24 mt-6"
+          type="submit"
+        />
       </form>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+
 import axios from "axios";
 
 const API = process.env.REACT_APP_API_URL;
@@ -11,7 +11,6 @@ export default function EditCommentForm({
   itemId,
   commentId,
 }) {
-  const navigate = useNavigate();
   //   const { id } = useParams();
 
   const [comment, setComment] = useState({
@@ -43,9 +42,9 @@ export default function EditCommentForm({
 
   return (
     <div className="edit_comment">
-      <h3>Edit Form</h3>
-      <form onSubmit={handleFormSubmit}>
-        <label htmlFor="commenter">
+      <h3 className="font-medium my-4 italic text-center">Edit Form</h3>
+      <form onSubmit={handleFormSubmit} className="mb-6">
+        <label htmlFor="commenter" className="font-medium text-stone-500">
           Name:{" "}
           <input
             id="commenter"
@@ -53,21 +52,58 @@ export default function EditCommentForm({
             onChange={handleTextChange}
             placeholder="Add your name!"
             required
+            className="block
+            w-full
+            px-3
+            py-1.5
+            text-base
+            text-gray-700
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded-lg
+            transition
+            ease-in-out
+            m-0
+            mb-3
+            focus:text-gray-700 focus:bg-white focus:border-orange-600 focus:outline-none"
           />
         </label>
-        <label htmlFor="comment">
+        <label htmlFor="comment" className="font-medium text-stone-500">
           Comment:{" "}
-          <input
+          <textarea
             id="comment"
             value={comment.comment}
             onChange={handleTextChange}
             placeholder="Share your experience"
             required
+            className="block
+            w-full
+            px-3
+            py-1.5
+            h-20
+            text-base
+            text-gray-700
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded-lg
+            transition
+            ease-in-out
+            m-0
+            mb-2
+            focus:text-gray-700 focus:bg-white focus:border-orange-600 focus:outline-none"
           />
         </label>
-        <input type="submit" />
+        <input
+          type="submit"
+          className="text-white bg-orange-300 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-full text-sm sm:w-auto px-2 py-2.5 text-center w-24 mt-6"
+        />
       </form>
-      <button onClick={() => toggleView()}>Forget it!</button>
+      <button
+        className="text-stone-500 bg-orange-200 hover:bg-orange-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-full text-sm sm:w-auto px-2 py-2.5 text-center w-24 mt-1"
+        onClick={() => toggleView()}
+      >
+        Forget it!
+      </button>
     </div>
   );
 }

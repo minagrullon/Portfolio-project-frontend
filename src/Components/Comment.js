@@ -27,7 +27,7 @@ export default function Comment({
           <h5 className="font-medium underline decoration-indigo-500">
             {comment.commenter}
           </h5>
-          <p className="p-3">{comment.comment}</p>
+          <p className="p-3 mb-3 font-light text-gray-800">{comment.comment}</p>
           <div className="grid justify-items-end">
             <button
               className="inline-block px-2 py-1 border-2 border-yellow-500 text-yellow-600 font-medium text-xs leading-tight uppercase rounded-lg hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out my-2"

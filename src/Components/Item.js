@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Item({ item: { id, image, name } }) {
   return (
-    <div classname="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white drop-shadow-lg">
+    <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white drop-shadow-lg">
       <Link to={`/items/${id}`}>
         <div className="rounded-lg shadow-lg bg-stone-100 max-w-sm hover:shadow-blue-300">
           <img
