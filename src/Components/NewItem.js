@@ -59,14 +59,15 @@ export default function NewItem({ setShowModal, showModal }) {
   };
 
   return (
-    <div className="new_item">
+    <div className="block p-12 rounded-xl shadow-xl bg-white w-6/12">
       {showModal ? (
         <Modal showModal={showModal} setShowModal={setShowModal} />
       ) : null}
-      <h3>New Item Form</h3>
+      <h3 className="font-medium leading-tight text-2xl mt-0 mb-2 text-blue-400 p-3">
+        New Item Form
+      </h3>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">
-          {/* //TODO in the future add margin right to the label to create the spaces between*/}
+        <label htmlFor="name" className="font-medium text-sky-500">
           Name:{" "}
           <input
             id="name"
@@ -74,21 +75,50 @@ export default function NewItem({ setShowModal, showModal }) {
             type="text"
             onChange={handleTextChange}
             placeholder="Add item name here..."
+            className="inline-flex
+            w-full
+            px-3
+            py-1.5
+            text-base
+            text-gray-700
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded-lg
+            transition
+            ease-in-out
+            m-0
+            mb-2
+            focus:text-gray-700 focus:bg-white focus:border-sky-500 focus:outline-none"
             // required
           />
         </label>
-        <label htmlFor="description">
+        <label htmlFor="description" className="font-medium text-sky-500">
           Description:{" "}
-          <input
+          <textarea
             id="description"
             value={item.description}
             type="text"
             onChange={handleTextChange}
             placeholder="Tell me about it..."
             // required
+            className="block
+            w-full
+            px-3
+            py-1.5
+            text-base
+            text-gray-700
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded-lg
+            transition
+            ease-in-out
+            m-0
+            mb-2
+            h-24
+            focus:text-gray-700 focus:bg-white focus:border-sky-300 focus:outline-none"
           />
         </label>
-        <label htmlFor="description">
+        <label htmlFor="description" className="font-medium text-sky-500">
           Price: ${" "}
           <input
             id="price"
@@ -98,10 +128,22 @@ export default function NewItem({ setShowModal, showModal }) {
             min="0"
             step="0.01"
             pattern="\d*\.\d{2}"
+            className="inline-block
+            w-2/12
+            px-3
+            py-1.5
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded-lg
+            transition
+            ease-in-out
+            m-0
+            mb-2"
             // required
           />
         </label>
-        <label htmlFor="link">
+        <br></br>
+        <label htmlFor="link" className="font-medium text-sky-500">
           Link:{" "}
           <input
             id="link"
@@ -110,10 +152,26 @@ export default function NewItem({ setShowModal, showModal }) {
             onChange={handleTextChange}
             placeholder="http://example.com"
             pattern="http[s]*://.+"
+            className="inline-block
+            w-2/3
+            px-3
+            py-1
+            text-base
+            text-gray-700
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded-lg
+            transition
+            ease-in-out
+            m-0
+            mb-2
+          
+            focus:text-gray-700 focus:bg-white focus:border-sky-300 focus:outline-none"
             // required
           />
         </label>
-        <label htmlFor="image">
+        <br></br>
+        <label htmlFor="image" className="font-medium text-sky-500">
           Image:{" "}
           <input
             id="image"
@@ -122,10 +180,26 @@ export default function NewItem({ setShowModal, showModal }) {
             onChange={handleTextChange}
             placeholder="Enter image url here!"
             pattern="http[s]*://.+"
+            className='inline-block
+            w-2/3
+            px-3
+            py-1
+            text-base
+            text-gray-700
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded-lg
+            transition
+            ease-in-out
+            m-0
+            mb-2
+          
+            focus:text-gray-700 focus:bg-white focus:border-sky-300 focus:outline-none"'
             // required
           />
         </label>
-        <label htmlFor="is_fav">
+        <br></br>
+        <label htmlFor="is_fav" className="font-medium text-sky-500">
           Favorite:{" "}
           <input
             id="is_fav"
@@ -134,7 +208,8 @@ export default function NewItem({ setShowModal, showModal }) {
             checked={item.is_fav}
           />
         </label>
-        <label htmlFor="category">
+        <br></br>
+        <label htmlFor="category" className="font-medium text-sky-500">
           Category:{" "}
           <select id="category" onChange={handleSelectionChange}>
             <option value=""></option>
@@ -145,7 +220,11 @@ export default function NewItem({ setShowModal, showModal }) {
             ))}
           </select>
         </label>
-        <input type="submit" />
+        <br></br>
+        <input
+          className="text-white text-mediium bg-blue-300 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm sm:w-auto px-2 py-2.5 text-center w-24 mt-6"
+          type="submit"
+        />
       </form>
     </div>
   );

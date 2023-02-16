@@ -64,7 +64,7 @@ export default function Comments({ itemId }) {
   }, [id]);
 
   return (
-    <div className="p-4 mx-64 phone:mx-0">
+    <div className="p-4 mx-64">
       <NewCommentForm itemId={itemId} handleAdd={handleAdd} />
       <h4 className="font-medium leading-tight text-base mt-4 mb-2 text-blue-500">
         Comments

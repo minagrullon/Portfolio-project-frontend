@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 export default function Home() {
   let navigate = useNavigate();
   return (
-    <div className="content-center h-screen bg-dog bg-no-repeat bg-left">
-      <div className="grid items-center p-4 bg-blue-100 w-6/12 mx-auto bg-opacity-90 rounded-lg my-20">
+    <div className="content-center h-screen bg-dog bg-no-repeat bg-left ">
+      <div className="grid items-center p-4 bg-blue-100 w-6/12 mx-auto bg-opacity-90 rounded-lg my-20 ">
         <h2 className="font-medium leading-tight text-3xl mb-2 text-blue-700 text-center pt-20">
           Welcome to Doggo Central!
         </h2>
@@ -43,7 +43,7 @@ export default function Home() {
               Bobbie and the Strays
             </a>
           </button>
-          <button className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+          <button className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">
             <a
               href="https://www.rescuecity.nyc/"
               rel="noreferrer"

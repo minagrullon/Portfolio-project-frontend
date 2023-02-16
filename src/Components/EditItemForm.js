@@ -61,11 +61,10 @@ export default function EditItemForm() {
   };
 
   return (
-    <div className="block p-6 rounded-xl shadow-xl bg-white w-6/12 h-auto phone:w-full phone:m-4">
+    <div className="block p-6 rounded-xl shadow-xl bg-white w-6/12 h-auto">
       <h3 className="font-medium text-xl text-sky-700 mb-10">Edit Page</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name" className="font-medium text-blue-600">
-          {/* //TODO in the future add margin right to the label to create the spaces between*/}
           Name:{" "}
           <input
             id="name"
@@ -198,7 +197,7 @@ export default function EditItemForm() {
           />
         </label>
         <br></br>
-        <label htmlFor="is_fav">
+        <label htmlFor="is_fav" className="font-medium text-blue-600">
           Favorite:{" "}
           <input
             id="is_fav"
@@ -208,7 +207,7 @@ export default function EditItemForm() {
           />
         </label>
         <br></br>
-        <label htmlFor="category">
+        <label htmlFor="category" className="font-medium text-blue-600">
           Category:{" "}
           <select
             id="category"
