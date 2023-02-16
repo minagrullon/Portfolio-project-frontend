@@ -5,9 +5,9 @@ export default function Item({ item: { id, image, name } }) {
   return (
     <div className="">
       <Link to={`/items/${id}`}>
-        <div className="rounded-lg shadow-lg bg-stone-100 max-w-sm hover:shadow-blue-300">
+        <div className="rounded-lg shadow-lg bg-stone-100 max-w-sm hover:shadow-blue-300 phone:">
           <img
-            className="w-auto mr-auto ml-auto h-96 md:h-auto object-cover md:w-48 md:rounded-none md:rounded-l-lg"
+            className="w-auto mr-auto ml-auto h-96 md:h-auto object-cover md:w-48 md:rounded-none md:rounded-l-lg phone:h-64 phone:w-auto"
             src={image}
             alt={name}
           />

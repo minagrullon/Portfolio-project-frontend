@@ -61,7 +61,7 @@ export default function EditItemForm() {
   };
 
   return (
-    <div className="block p-6 rounded-xl shadow-xl bg-white w-6/12 h-auto">
+    <div className="block p-6 rounded-xl shadow-xl bg-white w-6/12 h-auto phone:w-full phone:m-4">
       <h3 className="font-medium text-xl text-sky-700 mb-10">Edit Page</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name" className="font-medium text-blue-600">

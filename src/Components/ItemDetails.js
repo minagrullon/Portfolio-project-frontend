@@ -35,18 +35,22 @@ export default function ItemDetails() {
   };
 
   return (
-    <div className="grid justify-center">
-      <div className="flex justify-evenly my-4 p-10">
-        <div className="max-w-full h-auto rounded-lg border black mx-20">
-          <img className="h-96" src={item.image} alt={item.image} />
+    <div className="grid justify-center phone:grid">
+      <div className="flex justify-evenly my-4 p-10 phone:grid phone:justify-center phone:p-0">
+        <div className="max-w-full h-auto rounded-lg border black mx-20 phone:w-auto">
+          <img
+            className="h-96 phone:h-64 phone:w-auto"
+            src={item.image}
+            alt={item.image}
+          />
         </div>
-        <div className="w-6/12">
-          <h2 className="font-medium leading-tight text-2xl mt-0 mb-2 text-blue-800">
+        <div className="w-6/12 phone:w-64">
+          <h2 className="font-medium leading-tight text-2xl mt-0 mb-2 text-blue-800 phone:text-lg phone:p-8">
             {item.name}
             {item.is_fav ? <span className="ml-4">❣️</span> : null}
           </h2>
-          <h3>$ {item.price}</h3>
-          <p className="text-xl font-light leading-relaxed mt-6 mb-6 text-gray-800">
+          <h3 className="phone:pl-8">$ {item.price}</h3>
+          <p className="text-xl font-light leading-relaxed mt-6 mb-6 text-gray-800 phone:text-base phone:pl-8">
             {item.description}
           </p>
           <a
@@ -55,13 +59,13 @@ export default function ItemDetails() {
             target="_blank"
             className="font-medium leading-tight text-base text-blue-400 underline decoration-transparent hover:decoration-inherit transition duration-300 ease-in-out"
           >
-            <h5>Find the item here!</h5>
+            <h5 className="pl-10">Find the item here!</h5>
           </a>
         </div>
       </div>
-      <div className="flex justify-evenly my-4">
+      <div className="flex justify-evenly my-4 phone:grid">
         <button
-          className="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-blue-400 hover:bg-opacity-30 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+          className="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-blue-400 hover:bg-opacity-30 focus:outline-none focus:ring-0 transition duration-150 ease-in-out phone:mb-2"
           onClick={() => {
             navigate("/items");
           }}
@@ -69,7 +73,7 @@ export default function ItemDetails() {
           Go back
         </button>
         <button
-          className="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-yellow-400 hover:bg-opacity-30 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+          className="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-yellow-400 hover:bg-opacity-30 focus:outline-none focus:ring-0 transition duration-150 ease-in-out phone:mb-2"
           onClick={() => {
             navigate(`/items/${id}/edit`);
           }}

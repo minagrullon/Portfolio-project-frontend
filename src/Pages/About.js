@@ -4,15 +4,15 @@ import poki from "../poki-nom.jpeg";
 
 export default function About() {
   return (
-    <div className="flex justify-evenly bg-sky-100 h-screen">
-      <div className="pt-40 ">
+    <div className="flex justify-evenly bg-sky-100 h-auto phone:grid">
+      <div className="pt-40 phone:pt-10">
         <img
-          className="p-2 bg-white border rounded max-w-sm"
+          className="p-2 bg-white border rounded max-w-sm phone:h-64 phone:ml-8"
           src={poki}
           alt="lil-baby"
         />
       </div>
-      <div className="p-14 border-x-black w-6/12">
+      <div className="p-14 border-x-black w-6/12 phone:w-full">
         <h1 className="font-medium leading-tight text-4xl mt-0 mb-2 text-blue-400 p-10">
           About
         </h1>
@@ -27,7 +27,7 @@ export default function About() {
       </div>
       <div className="pt-10">
         <img
-          className="p-2 bg-white border rounded max-w-sm"
+          className="p-2 bg-white border rounded max-w-sm phone:h-96 phone:ml-20"
           src={blanco}
           alt="the boss himself"
         />
