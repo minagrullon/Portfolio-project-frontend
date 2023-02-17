@@ -28,3 +28,7 @@ As a user....
 ## Backend
 
 [git repo backend] (https://github.com/minagrullon/portfolio-backend-server)
+
+## Backend deployment
+
+[deployed](https://doggo-central-backend.onrender.com)
