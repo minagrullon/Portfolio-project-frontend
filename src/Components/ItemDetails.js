@@ -35,7 +35,7 @@ export default function ItemDetails() {
   };
 
   return (
-    <div className="grid justify-center">
+    <div className="grid justify-center phone:grid">
       <div className="flex justify-evenly my-4 p-10">
         <div className="max-w-full h-auto rounded-lg border black mx-20 ">
           <img className="h-96" src={item.image} alt={item.image} />

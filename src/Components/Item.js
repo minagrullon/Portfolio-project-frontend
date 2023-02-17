@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Item({ item: { id, image, name } }) {
   return (
-    <div className="">
+    <div className="w-96">
       <Link to={`/items/${id}`}>
         <div className="rounded-lg shadow-lg bg-stone-100 max-w-sm hover:shadow-blue-300">
           <img
