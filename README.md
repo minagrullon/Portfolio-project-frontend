@@ -20,10 +20,10 @@ As a user....
 
 === Installation ===
 
--To get the app on your local machine, `FORK` and `clone` this repo.
--In your terminal, run `npm install` then run the command `code .` to open VSCode.
--Create a .env file and put your localhost port from your backend here. you can name it `REACT_APP_API_URL`.
--Add `.env` to your `.gitignore`
+- To get the app on your local machine, `FORK` and `clone` this repo.
+- In your terminal, run `npm install` then run the command `code .` to open VSCode.
+- Create a .env file and put your localhost port from your backend here. you can name it `REACT_APP_API_URL`.
+- Add `.env` to your `.gitignore`
 
 ## Backend
 
