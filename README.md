@@ -2,7 +2,7 @@
 
 Doggo Central is an app to connect other dog owners so that people can share products that they recommend, giving users the ability to upload new items and leave comments.
 
-[deployed frontend]: (https://doggo-central.netlify.app/items)
+[deployed frontend] (https://doggo-central.netlify.app/items)
 
 ### User Stories
 
